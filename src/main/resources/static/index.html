@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>index</title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<header>
+    <h1 >COF -- dashboard</h1>
+
+</header>
+<script>
+    var color=1;
+    var date=2;
+    var type=3;
+</script>
+<section class="mainbox" onload="cc(type)">
+    <form name="date">
+        <div>
+            <!-- 下拉框 -->
+            <select name="sel" onchange="cc(value,date,type)">
+                <option value="1">1月</option>
+                <option value="2" >2月</option>
+                <option value="3">11月</option>
+                <option value="4">12月</option>
+            </select>
+        </div>
+        <div>
+            <!-- 下拉框 -->
+            <select name="sel" onchange="cc(color,value,type)">
+                <option value="1">1月</option>
+                <option value="2" >2月</option>
+                <option value="3">11月</option>
+                <option value="4">12月</option>
+            </select>
+        </div>
+    </form>
+    <div class="column">
+        <div class="panel bar1">
+            <h2>每月申请件数量</h2>
+
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar4">
+            <h2>
+                平均流程天数
+            </h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar7">
+            <h2>每月贷款额度测试数量及结果</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="panel bar2">
+            <h2>申请件状态</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+
+        <div class="panel bar5">
+            <h2>状态分布</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar8">
+            <h2></h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="panel bar3">
+            <h2>每月收入</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar6">
+            <h2>留资报告</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar9">
+            <h2></h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+</section>
+<script src="js/flexible.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/china.js"></script>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  src="js/form.js"></script>
+
+</html>

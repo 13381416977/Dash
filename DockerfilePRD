@@ -1,0 +1,7 @@
+FROM openjdk:8-jdk-alpine
+ADD target/e-waste-0.0.1-SNAPSHOT.jar /opt/e-waste-0.0.1-SNAPSHOT.jar
+ENV DATAPATH /data
+VOLUME $DATAPATH
+RUN apk add openjdk8 busybox tzdata curl
+ENTRYPOINT ["java","-XX:+UseG1GC","-Djava.security.egd=file:/dev/./urandom","-jar","/opt/e-waste-0.0.1-SNAPSHOT.jar","--spring.profiles.active=prd"]
+EXPOSE 8080

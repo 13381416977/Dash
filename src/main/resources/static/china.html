@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>cof</title>
+    <link rel="stylesheet" href="css/china.css"/>
+</head>
+<body>
+<!-- 头部的盒子 -->
+<header>
+    <h1>Online Finance Dashboard</h1>
+</header>
+
+<!-- 页面主体部分 -->
+<section class="mainbox">
+    <div class="column">
+        <div class="panel bar1">
+            <h2>福特每日申请件数</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar4">
+            <h2>
+                申请件渠道分布
+            </h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar7">
+            <h2>申请件平均生命周期</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="column">
+        <!-- no模块制作 -->
+        <div class="no" onload="today()">
+            <div>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>申请件数</td>
+                        <td>申请人数</td>
+                        <td>车辆创建数</td>
+                        <td>车辆创建人数</td>
+                    </tr>
+                    <tr >
+                        <td>今日</td>
+                        <td class="today">27</td>
+                        <td>16 </td>
+                        <td>17</td>
+                        <td>17 </td>
+                    </tr>
+                    <tr>
+                        <td>昨日</td>
+                        <td>24</td>
+                        <td>22 </td>
+                        <td>24</td>
+                        <td>23 </td>
+                    </tr>
+                    <tr>
+                        <td>当月</td>
+                        <td ><pre>        537  <span style="color: #dc3a38">⬆12%</span></pre></td>
+                        <td ><pre>        521  <span style="color: #dc3a38">⬆44%</span></pre></td>
+                        <td ><pre>        535  <span style="color: #3bdc2a">↓9%</span></pre></td>
+                        <td ><pre>        518  <span style="color: #dc3a38">⬆24%</span></pre></td>
+                    </tr>
+                </table>
+                </ul>
+            </div>
+            <!-- <div class="no-hd">
+             </div>
+             <div class="no-bd">
+             </div>-->
+        </div>
+        <div>
+
+            <h2 style="text-align: center;font-size: 25px;color: #527aff;letter-spacing: 5px">申请人地域分布</h2>
+        </div>
+        <!-- 地图模块 -->
+        <div class="map">
+            <div class="map1"></div>
+            <div class="map2"></div>
+            <div class="map3"></div>
+            <div class="chart"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="panel bar3">
+            <h2>林肯每日申请件数</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar6">
+            <h2>申请件状态分布</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar9">
+            <h2>每月贷款额度测试次数</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+</section>
+<script src="js/flexible.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/china.js"></script>
+<script src="js/chinaMap.js"></script>
+</body>
+</html>
