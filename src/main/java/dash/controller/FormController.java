@@ -2,9 +2,7 @@ package dash.controller;
 
 import dash.dto.PieMap;
 import dash.model.Form;
-import dash.repository.CarLoanIntentionRepository;
 import dash.repository.FormRepository;
-import dash.repository.POAUserAnswerRepository;
 import dash.utils.MapUtils;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +18,7 @@ public class FormController {
 
   @Autowired private FormRepository formRepository;
 
-  @Autowired private CarLoanIntentionRepository carRepository;
 
-  @Autowired private POAUserAnswerRepository poaRepository;
 
  static String dataSource[]={"FordFinance_H5","FordFinance","PUBLICS","LincolnFinance_H5","APPLETS","CAF","LincolnWay_H5","Lincoln_mall"};//8
 
@@ -121,18 +117,7 @@ public class FormController {
     return MapUtils.makeTwelve(MapUtils.makeMap(formRepository.process()));
   }
 
-  @RequestMapping(
-      value = "/leads",
-      method = {RequestMethod.GET})
-  public Object leads() {
-    return MapUtils.makeTwelve(MapUtils.makeMap(carRepository.leads()));
-  }
-  @RequestMapping(
-      value = "/test",
-      method = {RequestMethod.GET})
-  public Object test() {
-    return MapUtils.makeMap(poaRepository.test());
-  }
+
 
   @RequestMapping(value = "/list", method = RequestMethod.GET)
   public Object list() {
@@ -154,14 +139,4 @@ public class FormController {
     return map;
   }
 
-  @RequestMapping(
-      value = "/ss",
-      method = {RequestMethod.GET, RequestMethod.POST})
-  public Object ss() {
-    int i = formRepository.allCount();
-    /*return Lists.newArrayList(formRepository.status(),formRepository.process(),
-    formRepository.province(),formRepository.income());*/
-    return Lists.newArrayList(carRepository.leads(), poaRepository.test());
-    /*return formRepository.province();*/
-  }
 }

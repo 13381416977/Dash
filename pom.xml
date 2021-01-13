@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.com.dragonsoftbravo</groupId>
-    <artifactId>e-waste</artifactId>
+    <artifactId>two-datasource</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>e-waste</name>
     <description>Demo project for Spring Boot</description>
@@ -19,6 +19,13 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
