@@ -20,7 +20,7 @@ public class FormController {
 
 
 
- static String dataSource[]={"FordFinance_H5","FordFinance","PUBLICS","LincolnFinance_H5","APPLETS","CAF","LincolnWay_H5","Lincoln_mall"};//8
+ static  String dataSource[]={"FordFinance_H5","FordFinance","PUBLICS","LincolnFinance_H5","APPLETS","CAF","LincolnWay_H5","Lincoln_mall"};//8
 
   static String loanCategory[]={"2","3","4","5"};//4
 
